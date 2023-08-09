@@ -5,6 +5,12 @@ body {
     overflow: hidden;
 }
 
+
+svg {
+    height: 20px;
+    width: auto;
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(4, 150px);
@@ -14,6 +20,8 @@ body {
 }
 
 .header {
+    display: flex;
+    flex-direction: column;
     border: 1px solid red;
     grid-column-start: 3;
     grid-column-end: 6;
@@ -27,6 +35,7 @@ body {
     justify-content: space-between;
     padding-top: 20px;
     padding-left: 40px;
+    height: 20%;
 }
 
 .search-nav {
@@ -43,6 +52,8 @@ body {
     width: 500px;
     border-radius: 20px;
     height: 20px;
+    background-color: rgb(217, 217, 217);
+    border:none;
 }
 
 .notification {
@@ -50,12 +61,11 @@ body {
     flex-direction: row;
     align-items: center;
     gap: 20px;
+    margin-right: 20px;
 
 }
 
-/* .notification > svg {
-}
-*/
+
 
 #small-cat-logo {
     height: 40px;
@@ -64,13 +74,13 @@ body {
 } 
 
 .bottom-nav {
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    height: 45%;
     padding-top: 20px;
     padding-left: 40px;
-    position: relative;
-    top: -40px;
 }
 
 .user-info {
@@ -78,9 +88,11 @@ body {
     flex-direction: row;
     margin: 10px;
     padding: 10px;
+    position: relative;
+    top: 20px;
 }
 
-.user-info > img {
+ .user-info > img {
     height: 60px;
     width: 60px;
     border-radius: 50%;
@@ -97,17 +109,68 @@ body {
     top: -30px;
 }
 
+.post-options {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-right: 20px;
+    position: relative;
+    top: 20px;
+}
 
+.post-layout {
+    background-color: rgba(62, 184, 232, 0.955);
+    text-align: center;
+    color: white;
+    height: auto;
+    width: 60px;
+    padding: 10px;
+    border-radius: 50px;
+}   
 
+/* SIDE BAR */
 
 .side-bar {
-    border: 1px solid red;
+    background-color: rgba(62, 184, 232, 0.955);
+    color:white;
+    height: 100%;
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 9;
+    border: 1px solid red;
 }
 
+.side-bar-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-left: 20px;
+    border: 1px black dotted;
+
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    gap: 20px;
+}
+
+.list-options > ul {
+    padding: 0;
+    gap: 20px;
+    list-style-type: none;
+    
+    
+}
+
+
+
+
+
+
+/* MAIN */
 .main {
     border: 1px solid red;
     grid-column-start: 3;
@@ -115,3 +178,4 @@ body {
     grid-row-start: 2;
     grid-row-end: 6;
 }
+
